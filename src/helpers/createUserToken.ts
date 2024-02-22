@@ -14,7 +14,7 @@ const createUserToken = async (
 		{
 			name: user.name,
 			id: user._id,
-			isAdmin: user.isAdmin,
+			role: user.role,
 		},
 		`${process.env.JWT_SECRET}`,
 	);
@@ -23,7 +23,7 @@ const createUserToken = async (
 		message: "Você está autenticado",
 		token: token,
 		userId: user._id,
-		admin: user.isAdmin,
+		role: user.role,
 	});
 };
 
