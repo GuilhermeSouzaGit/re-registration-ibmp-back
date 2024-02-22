@@ -9,7 +9,7 @@ config();
 
 const app = express();
 
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({ credentials: true, origin: "*" }));
 
 cloudinary.config({
 	cloud_name: process.env.CLOUD_NAME,
