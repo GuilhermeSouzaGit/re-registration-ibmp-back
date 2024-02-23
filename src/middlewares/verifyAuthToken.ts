@@ -19,7 +19,7 @@ const verifyAuthToken = (
 	const token = getToken(request);
 
 	if (!token) {
-		return response.status(401).json({ message: "Acesso Negado!" });
+		return response.status(401).json({ message: "Token não existente" });
 	}
 
 	try {
